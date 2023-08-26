@@ -27,6 +27,10 @@ devtools::install_github("L-Groeninger/mixpanelutils")
 
 Full documentation website on: https://L-Groeninger.github.io/mixpanelutils
 
+## Documentation
+
+Full documentation website on: https://L-Groeninger.github.io/mixpanelutils
+
 ## Example
 
 This is a basic example which shows you how to solve a common problem:

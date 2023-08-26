@@ -9,7 +9,7 @@ output: github_document
 # mixpanelutils
 
 <!-- badges: start -->
-[![Codecov test coverage](https://codecov.io/gh/L-Groeninger/mixpanelutils/branch/master/graph/badge.svg)](https://app.codecov.io/gh/L-Groeninger/mixpanelutils?branch=master)
+[![Codecov test coverage](https://codecov.io/gh/L-Groeninger/mixpanelutils/branch/main/graph/badge.svg)](https://app.codecov.io/gh/L-Groeninger/mixpanelutils?branch=main)
 <!-- badges: end -->
 
 The goal of mixpanelutils is to ...

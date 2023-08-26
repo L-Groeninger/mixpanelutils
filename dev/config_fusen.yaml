@@ -1,0 +1,15 @@
+flat_minimal.Rmd:
+  path: dev/flat_minimal.Rmd
+  state: active
+  R:
+  - R/get_lookup_tables.R
+  - R/replace_lookup_table.R
+  tests: tests/testthat/test-get_lookup_tables.R
+  vignettes: vignettes/go-further.Rmd
+  inflate:
+    flat_file: dev/flat_minimal.Rmd
+    vignette_name: Go further
+    open_vignette: true
+    check: true
+    document: true
+    overwrite: ask

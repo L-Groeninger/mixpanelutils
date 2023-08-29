@@ -8,3 +8,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^mixpanelutils\.Rproj$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

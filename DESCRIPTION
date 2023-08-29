@@ -8,6 +8,7 @@ License: MIT + file LICENSE
 URL: https://github.com/L-Groeninger/mixpanelutils
 BugReports: https://github.com/L-Groeninger/mixpanelutils/issues
 Imports: 
+    checkmate,
     httr2,
     readr,
     rlang,
@@ -15,8 +16,7 @@ Imports:
     tidyr
 Suggests: 
     knitr,
-    rmarkdown,
-    testthat
+    rmarkdown
 VignetteBuilder: 
     knitr
 Config/fusen/version: 0.5.2

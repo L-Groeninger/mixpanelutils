@@ -1,22 +1,32 @@
----
-output: github_document
----
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-
 
 # mixpanelutils
 
 <!-- badges: start -->
-[![Codecov test coverage](https://codecov.io/gh/L-Groeninger/mixpanelutils/branch/main/graph/badge.svg)](https://app.codecov.io/gh/L-Groeninger/mixpanelutils?branch=main)
+
+[![Codecov test
+coverage](https://codecov.io/gh/L-Groeninger/mixpanelutils/branch/main/graph/badge.svg)](https://app.codecov.io/gh/L-Groeninger/mixpanelutils?branch=main)
 <!-- badges: end -->
 
-The goal of mixpanelutils is to ...
+The goal of mixpanelutils is to provide certain utility functions to
+work with Mixpanel and enrich some functionality. It is a package that
+wraps the [Mixpanel Ingestion
+API](https://developer.mixpanel.com/reference/ingestion-api).
+
+It is suggested to use environmental variables to store certain
+credentials:
+
+- MP_SERVICE_ACCOUNT_NAME
+- MP_SERVICE_ACCOUNT_TOKEN
+- MP_PROJECT_ID
+
+These credentials can be found in the Project Settings in Mixpanel.
 
 ## Installation
 
-You can install the development version of mixpanelutils from [GitHub](https://github.com/) with:
+You can install the development version of mixpanelutils from
+[GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -25,41 +35,34 @@ devtools::install_github("L-Groeninger/mixpanelutils")
 
 ## Documentation
 
-Full documentation website on: https://L-Groeninger.github.io/mixpanelutils
+Full documentation website on:
+<https://L-Groeninger.github.io/mixpanelutils>
 
 ## Documentation
 
-Full documentation website on: https://L-Groeninger.github.io/mixpanelutils
+Full documentation website on:
+<https://L-Groeninger.github.io/mixpanelutils>
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you which lookup tables are
+currently present in your Project:
 
-
-```r
+``` r
 library(mixpanelutils)
-#> Error in library(mixpanelutils): there is no package called 'mixpanelutils'
-## basic example code
+
+get_lookup_tables(mp_service_account_name = Sys.getenv("MP_SERVICE_ACCOUNT_NAME"),
+                  mp_service_account_secret = Sys.getenv("MP_SERVICE_ACCOUNT_TOKEN"),
+                  mp_project_id = Sys.getenv("MP_PROJECT_ID"))
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+The function `replace_lookup_table()` helps at as the name suggests
+replacing a lookup table with an updated version.
 
-
-```r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+``` r
+replace_lookup_table(mp_service_account_name = Sys.getenv("MP_SERVICE_ACCOUNT_NAME"),
+                    mp_service_account_secret = Sys.getenv("MP_SERVICE_ACCOUNT_TOKEN"),
+                    mp_project_id = Sys.getenv("MP_PROJECT_ID"),
+                    lookup_table_id = "1234",
+                    table_to_replace = df)
 ```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/v1/examples>.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" alt="plot of chunk pressure" width="100%" />
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.

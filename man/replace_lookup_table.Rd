@@ -2,7 +2,7 @@
 % Please edit documentation in R/replace_lookup_table.R
 \name{replace_lookup_table}
 \alias{replace_lookup_table}
-\title{replace_lookup_table Title}
+\title{replace_lookup_table}
 \usage{
 replace_lookup_table(
   mp_service_account_name = Sys.getenv("MP_SERVICE_ACCOUNT_NAME"),
@@ -17,9 +17,9 @@ replace_lookup_table(
 
 \item{mp_service_account_secret}{The Mixpanel Service Account Token}
 
-\item{mp_project_id}{The Mixpanel Project ID}
+\item{mp_project_id}{str The Mixpanel Project ID}
 
-\item{lookup_table_id}{The id to identify the lookup table}
+\item{lookup_table_id}{str The id to identify the lookup table}
 
 \item{table_to_replace}{The dataframe to replace the lookup table}
 }
@@ -27,5 +27,5 @@ replace_lookup_table(
 Success Message if Lookup table has been replaced successfully
 }
 \description{
-replace_lookup_table Title
+replace_lookup_table
 }

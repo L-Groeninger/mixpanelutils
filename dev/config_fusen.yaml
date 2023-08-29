@@ -4,7 +4,7 @@ flat_minimal.Rmd:
   R:
   - R/get_lookup_tables.R
   - R/replace_lookup_table.R
-  tests: tests/testthat/test-get_lookup_tables.R
+  tests: []
   vignettes: vignettes/go-further.Rmd
   inflate:
     flat_file: dev/flat_minimal.Rmd

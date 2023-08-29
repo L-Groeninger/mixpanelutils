@@ -22,10 +22,5 @@ library(mixpanelutils)
 
 # Get List of all Lookup tables in Project
 
-```{r examples-get_lookup_tables}
-get_lookup_tables()
-
-```
-
 # Replace a Lookup Table in a Project
 

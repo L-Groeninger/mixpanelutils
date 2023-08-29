@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_lookup_tables.R
 \name{get_lookup_tables}
 \alias{get_lookup_tables}
-\title{my_fun Title}
+\title{get_lookup_tables}
 \usage{
 get_lookup_tables(
   mp_service_account_name = Sys.getenv("MP_SERVICE_ACCOUNT_NAME"),
@@ -15,15 +15,11 @@ get_lookup_tables(
 
 \item{mp_service_account_secret}{The Mixpanel Service Account Token}
 
-\item{mp_project_id}{The Mixpanel Project ID}
+\item{mp_project_id}{str The Mixpanel Project ID}
 }
 \value{
 Tibble with information about Lookup tables
 }
 \description{
-my_fun Title
-}
-\examples{
-get_lookup_tables()
-
+get_lookup_tables
 }
